@@ -2576,7 +2576,7 @@ inline u32 rtw_random32(void)
 {
 #ifdef PLATFORM_LINUX
 #if (LINUX_VERSION_CODE >= KERNEL_VERSION(3, 8, 0))
-	return prandom_u32();
+	return prandom_u32_max();
 #elif (LINUX_VERSION_CODE <= KERNEL_VERSION(2, 6, 18))
 	u32 random_int;
 	get_random_bytes(&random_int , 4);
